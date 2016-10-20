@@ -19,4 +19,13 @@ describe('Game', function() {
                                 [null, "O", null]])
   });
 
+  it('starts with an empty board', function() {
+    game.board = ([[null, null, null],
+                   [null, null, null],
+                   [null, "O", null]])
+    expect(function() {game.move("player2", 1, 2)}).toThrow(new Error("That spot is already taken"))
+  });
+
+
+
 });

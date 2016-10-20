@@ -6,7 +6,10 @@ Game = function() {
 
 Game.prototype = {
   move: function(player, x, y) {
-    if(player == "player1"){
+    if (this.board[y][x] !== null) {
+      throw new Error("That spot is already taken")
+    }
+    else if(player == "player1"){
       this.board[y][x] = "O"
     } else {
       this.board[y][x] = "X"

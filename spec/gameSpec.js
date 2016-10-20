@@ -19,7 +19,7 @@ describe('Game', function() {
                                 [null, "O", null]])
   });
 
-  it('starts with an empty board', function() {
+  it('stops a player moving into an already taken spot', function() {
     game.board = ([[null, null, null],
                    [null, null, null],
                    [null, "O", null]])
